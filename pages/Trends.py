@@ -9,7 +9,7 @@ from datetime import datetime
 sns.set_theme(style="whitegrid")
 
 # Load the dataset
-file_path = "C:/Users/USER/Documents/Mundiapolis/M1/projets/M1/Project_python/fatalities_isr_pse_conflict_2000_to_2023.csv"
+file_path = "fatalities_isr_pse_conflict_2000_to_2023.csv"
 data = pd.read_csv(file_path)
 
 # Title and introduction
