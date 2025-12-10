@@ -11,7 +11,7 @@ from streamlit_folium import st_folium
 st.title("Geospatial Analysis of Fatalities")
 
 # Load the dataset
-file_path = "C:/Users/USER/Documents/Mundiapolis/M1/projets/M1/Project_python/fatalities_isr_pse_conflict_2000_to_2023.csv"
+file_path = "fatalities_isr_pse_conflict_2000_to_2023.csv"
 data = pd.read_csv(file_path)
 
 # Sidebar for navigation
