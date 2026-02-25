@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Streamlit App
-        # -L force curl à suivre les redirections (303 -> 200)
-        # -A simule un navigateur Chrome pour éviter d'être bloqué comme un robot
-        run: curl -L -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://geopolitical-conflict-analysis-2bnirh6dz4y4cblvau7qc9.streamlit.app/
+        # -b cookies.txt : utilise les cookies
+        # -c cookies.txt : enregistre les cookies
+        # --max-time 30 : s'arrête après 30 secondes au cas où
+        run: |
+          curl -L -b cookies.txt -c cookies.txt -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://geopolitical-conflict-analysis-2bnirh6dz4y4cblvau7qc9.streamlit.app/
